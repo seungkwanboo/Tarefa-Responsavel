@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Tarefa</title>
+    <link rel="stylesheet" href="Tarefa.css">
+    <link rel="icon" href="img/img/img/Taks.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                
+                <li><a href="#home">Home</a></li>
+               
+                <li class="dropdown">
+                    <a href="#servicos" class="dropbtn">Tarefas</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#Criar">Criar </a></li>
+                        <li><a href="#Ler">Ler </a></li>
+                        <li><a href="#Atualizar">Atualizar </a></li>
+                        <li><a href="#Deletar">Deletar </a></li>
+                    </ul>
+                </li>
+                <li><a href="Responsavel.html">Responsável</a></li>
+            </ul>
+        </nav>
+        </header>
+
+    <div class="form">
+      <center>  <a href="index.html"><img src="img/Taks.gif" alt=""></a></center>
+        <h2 id="heading">Cadastrar Tarefa</h2><br>
+        <form action="/Tarefa" method="POST">
+           
+            <div class="field">
+                <label for="nome">Nome da Tarefa:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o nome da tarefa" required>
+            </div>
+
+           
+            <div class="field">
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" placeholder="Descreva a tarefa" rows="4" required></textarea>
+            </div>
+
+            
+            <div class="field">
+                <label for="data_entrega">Data de Entrega:</label>
+                <input type="date" id="data_entrega" name="data_entrega" required>
+            </div>
+
+           
+            <div class="field">
+                <label for="responsavel">Responsável:</label>
+                <select id="responsavel" name="responsavel_id" required>
+                    <option value="">Selecione o responsável</option>
+                    <option value="1">João Silva</option>
+                    <option value="2">Maria Souza</option>
+                    <option value="3">Pedro Santos</option>
+                    
+                </select><br>
+                <a href="#" class="add-responsavel">Adicionar novo responsável</a>
+            </div>
+
+            <div class="field">
+                <label for="status">Status:</label><br>
+                <select id="status" name="status">
+                    <option value="incompleta">Incompleta</option>
+                    <option value="completa">Completa</option>
+                </select>
+            </div><br>
+
+           
+            <div class="field">
+                <button class="button3" type="submit">Salvar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
